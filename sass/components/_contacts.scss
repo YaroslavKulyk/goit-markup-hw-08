@@ -1,0 +1,26 @@
+.contacts {
+  display: flex;
+  margin-left: auto;
+}
+
+.contacts .link {
+  display: flex;
+  align-items: center;
+
+  color: $primary-text-color;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  transition: color 250ms $anima-timing;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.contacts .icon {
+  margin-right: 10px;
+  fill: currentColor;
+}

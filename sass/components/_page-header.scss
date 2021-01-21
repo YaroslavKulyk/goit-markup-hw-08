@@ -1,0 +1,8 @@
+.page-header {
+  border-bottom: 1px solid $header-bottom-line;
+
+  &-flex {
+    display: flex;
+    align-items: center;
+  }
+}

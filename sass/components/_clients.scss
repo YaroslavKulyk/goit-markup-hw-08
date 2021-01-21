@@ -1,0 +1,32 @@
+.clients {
+  display: flex;
+  justify-content: space-between;
+}
+
+.clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 90px;
+  border: 1px solid $svg-icon-color;
+  border-radius: 4px;
+
+  transition: border-color 250ms $anima-timing;
+
+  &:hover,
+  &:focus {
+    border-color: $accent-color;
+  }
+}
+
+.clients-link .icon {
+  fill: $svg-icon-color;
+
+  transition: fill 250ms $anima-timing;
+}
+
+.clients-link:hover .icon,
+.clients-link:focus .icon {
+  fill: $accent-color;
+}
