@@ -1,5 +1,8 @@
 @import './utils/variables';
+@import './utils/breakpoints';
 @import './base/general';
+@import './components/section';
+@import './components/container';
 @import './components/backdrop';
 @import './components/modal';
 @import './components/page-header';
