@@ -5,9 +5,15 @@
 }
 
 .footer-content {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
+  @media screen and (max-width: $tablet) {
+    text-align: center;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
 }
 
 .logo.bottom {
@@ -17,27 +23,43 @@
 }
 
 .address {
-  display: block;
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-right: 70px;
-
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
+
+  @media screen and (max-width: $tablet) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 70px;
+  }
 }
 
 .address-physical {
   margin-top: 0;
-  margin-bottom: 9px;
 
   color: $white;
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
+  @media screen and (max-width: $tablet) {
+    margin-bottom: 8px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-top: 0;
+    margin-bottom: 9px;
+  }
 }
 
 .address-list {
+  @media screen and (max-width: $tablet) {
+    margin-bottom: 8px;
+  }
+
   display: block;
   margin-bottom: 9px;
 
@@ -51,7 +73,13 @@
 }
 
 .join {
-  margin-right: 93px;
+  @media screen and (max-width: $tablet) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 93px;
+  }
 }
 
 .join-appeal {
@@ -63,15 +91,32 @@
   line-height: 1.14;
 }
 
-.join .social {
-  justify-content: left;
+// .join .social {
+//   justify-content: left;
+// }
+
+// .join .social-item:not(:last-child) {
+//   margin-right: 10px;
+// }
+
+.social.list {
+  display: flex;
+  justify-content: center;
 }
 
-.join .social-item:not(:last-child) {
-  margin-right: 10px;
+.join .social-item {
+  @media screen and (max-width: $tablet) {
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 .join .social-link {
+  width: 44px;
+  height: 44px;
   background: $footer-social-icon-bg;
 
   &:hover,
@@ -81,18 +126,32 @@
 }
 
 .join .icon {
+  width: 20px;
+  height: 20px;
   fill: $white;
 }
 
+// .subscribe {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+// }
+
 .subscribe-form {
   display: flex;
+  flex-direction: column;
+  // justify-content: center;
   align-items: center;
+  // text-align: center;
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .subscribe-input {
-  min-width: 358px;
   height: 50px;
-  margin-right: 12px;
+
   padding: 15px 16px;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -107,11 +166,25 @@
 
     color: $footer-address;
   }
+
+  @media screen and (max-width: $tablet) {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    min-width: 358px;
+    margin-right: 12px;
+  }
 }
 
 .subscribe.button {
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: $tablet) {
+    max-width: 250px;
+  }
 }
 
 .subscribe-button-text {

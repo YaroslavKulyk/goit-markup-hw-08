@@ -1,8 +1,23 @@
 .page-header {
+  position: relative;
+
+  height: 60px;
+  display: flex;
+  align-items: center;
   border-bottom: 1px solid $header-bottom-line;
 
-  &-flex {
+  @media screen and (min-width: $tablet) {
+    height: 80px;
+  }
+
+  & .container,
+  &__nav {
     display: flex;
     align-items: center;
+
+    @media screen and (max-width: $tablet) {
+      width: 100%;
+      justify-content: space-between;
+    }
   }
 }

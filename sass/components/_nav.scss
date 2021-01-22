@@ -1,6 +1,13 @@
 .nav {
-  display: flex;
-  margin-left: 93px;
+  @media screen and (max-width: $tablet) {
+    display: flex;
+    margin-left: 93px;
+  }
+}
+
+.nav.list {
+  display: inline-block;
+  margin: 0;
 }
 
 .nav .item + .item,
