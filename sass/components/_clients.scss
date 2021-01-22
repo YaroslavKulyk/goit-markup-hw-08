@@ -16,6 +16,12 @@
     flex-wrap: wrap;
     margin: -15px;
   }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 
 .clients-item {
@@ -39,6 +45,11 @@
 
   @media screen and (max-width: $tablet) {
     width: 210px;
+    height: 90px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 226px;
     height: 90px;
   }
 

@@ -47,10 +47,6 @@
 // }
 
 .menu-container {
-  background-color: $white;
-
-  text-align: center;
-
   @media screen and (max-width: $tablet) {
     display: none;
     position: absolute;
@@ -61,6 +57,21 @@
     height: 393px;
 
     padding: 60px;
+
+    background-color: $white;
+
+    text-align: center;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    align-items: center;
   }
 
   &.is-open {
@@ -81,12 +92,24 @@
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  align-items: center;
 
   @media screen and (max-width: $tablet) {
     margin-bottom: 60px;
     font-size: 18px;
     & .item {
       margin-bottom: 40px;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    & .item {
+      margin-right: 50px;
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 }
@@ -106,7 +129,7 @@
     content: '';
     display: block;
     position: absolute;
-    top: calc(100% + 8px);
+    top: calc(100% - 4px);
     left: 0;
 
     height: 4px;
@@ -116,6 +139,29 @@
     border-radius: 4px;
 
     opacity: 0;
+  }
+
+  @media screen and (min-width: $tablet) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  @media screen and (max-width: $tablet) {
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: calc(100% + 8px);
+      left: 0;
+
+      height: 4px;
+      width: 100%;
+
+      background-color: $accent-color;
+      border-radius: 4px;
+
+      opacity: 0;
+    }
   }
 }
 
@@ -127,7 +173,7 @@
 
 .contacts {
   color: $primary-text-color;
-  font-size: 18px;
+  font-size: 12px;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -137,8 +183,37 @@
   align-items: center;
 
   @media screen and (max-width: $tablet) {
+    font-size: 18px;
     & .item {
       margin-bottom: 16px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    & .item {
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      display: flex;
+      flex-direction: row;
+      // align-items: center;
+
+      & .item {
+        margin-bottom: 0;
+        margin-right: 30px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
     }
   }
 
@@ -146,6 +221,14 @@
     margin-right: 10px;
     fill: currentColor;
   }
+}
+
+.contacts.list {
+  align-items: center;
+  @media screen and (min-width: $tablet) and (max-width: $desktop) {
+    align-items: flex-start;
+  }
+  // justify-content: center;
 }
 
 .contacts .link {

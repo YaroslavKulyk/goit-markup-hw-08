@@ -10,4 +10,12 @@
   &-accent {
     color: $accent-color;
   }
+
+  @media screen and (min-width: $tablet) {
+    margin-right: 88px;
+  }
+}
+
+.logo.bottom {
+  margin-right: 0;
 }

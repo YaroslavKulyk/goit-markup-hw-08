@@ -3,10 +3,18 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
-  min-width: 528px;
-  min-height: 581px;
   padding: 40px;
+
+  @media screen and (max-width: 1199px) {
+    min-width: 450px;
+    min-height: 609px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    min-width: 528px;
+    min-height: 581px;
+    padding: 40px;
+  }
 
   background: $white;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -135,8 +143,15 @@
 .accept {
   position: relative;
 
-  text-align: center;
   margin-bottom: 30px;
+  text-align: center;
+
+  @media screen and (max-width: 1199px) {
+    text-align: right;
+    &-label {
+      font-size: 12px;
+    }
+  }
 }
 
 .accept a {
@@ -159,6 +174,8 @@
 
   transition: background-color 250ms $anima-timing,
     border-color 250ms $anima-timing;
+
+  margin-right: 8px;
 }
 
 .accept-checkbox:checked + .accept-label::before {
