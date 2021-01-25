@@ -1,15 +1,17 @@
 .projects {
-  display: flex;
-  flex-wrap: wrap;
-  margin: -15px;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 
 .projects .item {
   margin: 15px;
 
-  @media screen and (max-width: 767px) {
-    width: 100%;
-  }
+  // @media screen and (max-width: 767px) {
+  //   max-width: 100%;
+  // }
 
   @media screen and (min-width: $tablet) {
     width: 354px;
