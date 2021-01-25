@@ -23,11 +23,43 @@
 }
 
 .projects-filter {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
 }
 
-.projects-filter .item + .item {
-  margin-left: 8px;
+// .projects-filter .item + .item {
+//   margin-left: 8px;
+// }
+
+.projects-filter .item {
+  margin-right: 8px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+  @media screen and (min-width: $tablet) {
+    &:nth-child(3) {
+      margin-right: 8px;
+    }
+  }
+}
+
+.projects-filter__row {
+  @media screen and (max-width: 767px) {
+    display: flex;
+    margin-bottom: 15px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
 }

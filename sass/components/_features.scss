@@ -1,6 +1,6 @@
 .features {
   &-title {
-    @media screen and (max-width: $tablet) {
+    @media screen and (max-width: 767px) {
       text-align: center;
     }
   }
@@ -41,7 +41,7 @@
   border-radius: 1px solid transparent;
   border-radius: 4px;
 
-  @media screen and (max-width: $tablet) {
+  @media screen and (max-width: 767px) {
     margin-bottom: 15px;
   }
 }

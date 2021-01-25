@@ -11,7 +11,7 @@
 }
 
 .clients.list {
-  @media screen and (max-width: $tablet) {
+  @media screen and (max-width: 767px) {
     display: flex;
     flex-wrap: wrap;
     margin: -15px;
@@ -43,7 +43,7 @@
     border-color: $accent-color;
   }
 
-  @media screen and (max-width: $tablet) {
+  @media screen and (max-width: 767px) {
     width: 210px;
     height: 90px;
   }
