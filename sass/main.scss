@@ -1,6 +1,6 @@
 @import './utils/variables';
 @import './utils/breakpoints';
-@import './base/general';
+@import './base/common';
 @import './components/section';
 @import './components/container';
 @import './components/backdrop';
@@ -8,8 +8,6 @@
 @import './components/page-header';
 @import './components/logo';
 @import './components/mobile-menu';
-// @import './components/nav';
-// @import './components/contacts';
 @import './components/hero';
 @import './components/features';
 @import './components/services';

@@ -977,7 +977,7 @@ img {
   line-height: 1.19;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .team-members__social.list {
     display: -webkit-box;
     display: -ms-flexbox;
